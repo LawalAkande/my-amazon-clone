@@ -1,22 +1,61 @@
-<div class="product">
+<div class="product" *ngFor="let p of products">
     <div class="product__info">
-        <div class="product__title">
-            The lawal Amazon
-        </div>
-        <div class="product__price">
+        <p>{{p.title}}</p>
+        <p class="product__price">
             <small>$</small>
-            <strong>29.89</strong>
-        </div>
+            <strong>{{p.price}}</strong>
+        </p>
         <div class="product__rating">
-            <p><i class="fa fa-star" aria-hidden="true"></i></p>
-            <p><i class="fa fa-star" aria-hidden="true"></i></p>
-            <p><i class="fa fa-star" aria-hidden="true"></i></p>
+            <p>{{p.rating}}</p>
         </div>
     </div>
-    <div class="product__image">
-        <img 
-            src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Dashboard/Fuji_Dash_Gaming_1x._SY304_CB432517394_.jpg" 
-            alt="">
-    </div>
-    <button>Add to basket</button>
+    <img 
+        class="product__image"
+        src="{{p.image}}"
+        alt=""
+    >
+    <button>Addd to basket</button>
 </div>
+
+
+
+
+
+
+
+
+
+<!-- <div class="row">
+    <div class="product col">
+        <mat-card style="background-color: white;" class="p-3">
+            <div class="product__info">
+                <div class="product__title">
+                Hey
+                </div>
+                <div class="product__price">
+                    <small>$</small>
+                    <strong>524</strong>
+                </div>
+                <div class="product__rating">
+                    <p>☆</p>
+                    <p>☆</p>
+                    <p>☆</p>
+                </div>
+            </div>
+            <div class="product__image">
+                <img 
+                src="https://images-na.ssl-images-amazon.com/images/I/51Zymoq7UnL._AC_SY400_.jpg"
+                alt="">
+            </div>
+            <button (click)=addToBasket() class="justify-content-center">Addd to basket</button>
+        </mat-card> 
+    </div>   
+</div>  -->
+<!-- <img  
+    src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Dashboard/Fuji_Dash_Gaming_1x._SY304_CB432517394_.jpg" 
+                src="https://images-na.ssl-images-amazon.com/images/I/51Zymoq7UnL._AC_SY400_.jpg"
+                alt="">
+-->
+<!-- <ul *ngFor="let p of products">
+    <li><img src="{{p.image}}" alt=""></li>
+</ul> -->
